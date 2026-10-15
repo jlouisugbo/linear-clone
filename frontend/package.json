@@ -1,15 +1,15 @@
 {
   "name": "frontend",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "oxlint --type-aware",
-    "lint:fix": "oxlint --type-aware --fix",
+    "dev": "vp dev",
+    "build": "tsc -b && vp build",
+    "lint": "vp lint --type-aware",
+    "lint:fix": "vp lint --type-aware --fix",
     "typecheck": "tsc -b --noEmit",
-    "preview": "vite preview"
+    "preview": "vp preview"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -50,11 +50,12 @@
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
     "jsdom": "^30.1.2",
-    "oxlint": "^1.87.0",
-    "oxlint-tsgolint": "^7.0.2004",
     "shadcn": "^4.21.4",
     "typescript": "~6.0.2",
-    "vite": "^8.3.0",
-    "vitest": "^5.0.4"
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.2.0",
+    "vite-plus": "1.2.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.2.0"
   }
 }
